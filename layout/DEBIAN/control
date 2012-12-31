@@ -1,0 +1,11 @@
+Package: org.thebigboss.quickqr
+Name: QuickQR
+Depends: mobilesubstrate, firmware (>= 5.0)
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: QR code scanning in Camera!
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Author: Conrad Kramer <support@kramerapps.com>
+Section: Tweaks
+dev: conradkramer
+Tag: cydia::commercial, purpose::extension

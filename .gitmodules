@@ -1,0 +1,6 @@
+[submodule "zxing"]
+	path = zxing
+	url = git://github.com/zxing/zxing.git
+[submodule "theos"]
+	path = theos
+	url = git://github.com/DHowett/theos.git
