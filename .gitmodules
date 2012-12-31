@@ -1,5 +1,5 @@
 [submodule "zxing"]
-	path = zxing
+	path = Tweak/zxing
 	url = git://github.com/zxing/zxing.git
 [submodule "theos"]
 	path = theos

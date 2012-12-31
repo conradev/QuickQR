@@ -23,9 +23,9 @@ git submodule update --init
 
 The next step is to build the C++ port of ZXing
 ``` sh
-cd zxing/cpp
+cd Tweak/zxing/cpp
 xcodebuild -project ios.xcodeproj -target zxing -sdk iphoneos6.0 -configuration Release -arch armv7 -arch armv7s
-cd ../..
+cd ../../..
 ```
 
 To build the project, you need only run

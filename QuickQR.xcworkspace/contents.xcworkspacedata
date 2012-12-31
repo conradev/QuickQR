@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Tweak">
+      <FileRef
+         location = "group:Tweak/Makefile">
+      </FileRef>
+      <FileRef
+         location = "group:Tweak/PLCameraController.h">
+      </FileRef>
+      <FileRef
+         location = "group:Tweak/PLCameraController.x">
+      </FileRef>
+      <FileRef
+         location = "group:Tweak/QRCaptureController.h">
+      </FileRef>
+      <FileRef
+         location = "group:Tweak/QRCaptureController.mm">
+      </FileRef>
+      <FileRef
+         location = "group:Tweak/CGImageLuminanceSource.h">
+      </FileRef>
+      <FileRef
+         location = "group:Tweak/CGImageLuminanceSource.cpp">
+      </FileRef>
+   </Group>
+</Workspace>
