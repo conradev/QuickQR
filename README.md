@@ -1,6 +1,6 @@
 # QuickQR
 
-This project integrates a QR code reader into Apple's Camera application. It brings the "quick" back into "quick response"!
+This project integrates a QR code reader into Apple's Camera application. It brings the 'quick' back into 'quick response'!
 
 The project uses [ZXing](http://code.google.com/p/zxing/) to read QR codes, and [Theos](https://github.com/DHowett/theos) as its build system.
 
