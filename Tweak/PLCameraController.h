@@ -1,12 +1,12 @@
 #import <AVFoundation/AVFoundation.h>
 
-typedef enum{
+typedef enum {
     PLCameraModePhoto = 0,
     PLCameraModeVideo = 1,
     PLCameraModePanorama = 2
 } PLCameraMode;
 
-typedef enum{
+typedef enum {
     PLCameraDeviceBack = 0,
     PLCameraDeviceFront = 1
 } PLCameraDevice;

@@ -63,7 +63,7 @@ static char captureControllerKey;
     %orig();
 }
 
-- (void)_configureSessionWithCameraMode:(int)cameraMode cameraDevice:(int)cameraDevice {
+- (void)_configureSessionWithCameraMode:(PLCameraMode)cameraMode cameraDevice:(PLCameraDevice)cameraDevice {
     %orig();
     
     AVCaptureOutput *output = self.captureController.output;
