@@ -81,7 +81,9 @@ using namespace zxing::qrcode;
     } catch (IllegalArgumentException const &exception) { }
         
     if (result && [self.delegate respondsToSelector:@selector(captureController:recognizedResult:)]) {
-        [self.delegate captureController:self recognizedResult:result];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [self.delegate captureController:self recognizedResult:result];
+        });
     }
 }
 

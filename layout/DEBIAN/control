@@ -3,7 +3,7 @@ Name: QuickQR
 Depends: mobilesubstrate, firmware (>= 5.0)
 Version: 0.0.1
 Architecture: iphoneos-arm
-Description: QR code scanning in Camera!
+Description: QR code scanning in the Camera!
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Author: Conrad Kramer <support@kramerapps.com>
 Section: Tweaks

@@ -30,12 +30,10 @@ static char captureControllerKey;
 
 %new(v@:@@)
 - (void)captureController:(QRCaptureController *)captureController recognizedResult:(NSString *)result {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"QR Code" message:result delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-        [alert show];
-        [alert release];
-    });
-    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"QR Code" message:result delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+    [alert show];
+    [alert release];
+
     // Five second timeout
     captureController.enabled = NO;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
