@@ -30,7 +30,10 @@ static char captureControllerKey;
 
 %new(v@:@@)
 - (void)captureController:(QRCaptureController *)captureController recognizedResult:(NSString *)result {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"QR Code" message:result delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+    NSString *action = [NSURL URLWithString:result] ? @"Open" : @"Copy";
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"QR Code" message:result delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:action, nil];
+    alert.delegate = self;
+    
     [alert show];
     [alert release];
 
@@ -39,6 +42,19 @@ static char captureControllerKey;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
         captureController.enabled = YES;
     });
+}
+
+%new(v@:@i)
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {    
+    if (alertView.firstOtherButtonIndex == buttonIndex) {
+        NSURL *url = [NSURL URLWithString:alertView.message];
+        
+        if (url) {
+            [[UIApplication sharedApplication] openURL:url];
+        } else {
+            [[UIPasteboard generalPasteboard] setString:alertView.message];
+        }
+    }
 }
 
 - (BOOL)_setupCamera {
