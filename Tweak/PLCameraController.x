@@ -45,7 +45,7 @@ static char captureControllerKey;
 }
 
 %new(v@:@i)
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {    
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (alertView.firstOtherButtonIndex == buttonIndex) {
         NSURL *url = [NSURL URLWithString:alertView.message];
         
