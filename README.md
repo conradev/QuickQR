@@ -10,7 +10,7 @@ The project uses [ZXing](http://code.google.com/p/zxing/) to read QR codes, and 
 
 ### Prequisites
 
-- [Xcode 4.5](https://itunes.apple.com/us/app/xcode/id497799835), which includes the iOS 6 SDK
+- [Xcode 4.6](https://itunes.apple.com/us/app/xcode/id497799835), which includes the iOS 6.1 SDK
 - A jailbroken device running iOS 5 or later
 
 ### Building
@@ -26,7 +26,7 @@ git submodule update --init
 The next step is to build the C++ port of ZXing
 ``` sh
 cd Tweak/zxing/cpp
-xcodebuild -project ios.xcodeproj -target zxing -sdk iphoneos6.0 -configuration Release -arch armv7 -arch armv7s
+xcodebuild -project ios.xcodeproj -target zxing -sdk iphoneos6.1 -configuration Release -arch armv7 -arch armv7s
 cd ../../..
 ```
 
