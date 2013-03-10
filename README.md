@@ -26,7 +26,7 @@ git submodule update --init
 The next step is to build the C++ port of ZXing
 ``` sh
 cd Tweak/zxing/cpp
-xcodebuild -project ios.xcodeproj -target zxing -sdk iphoneos6.1 -configuration Release -arch armv7 -arch armv7s
+xcodebuild -project ios.xcodeproj -target zxing -sdk iphoneos6.1 -configuration Release -arch armv7 -arch armv7s OTHER_CPLUSPLUSFLAGS="-Wno-unused-private-field"
 cd ../../..
 ```
 
