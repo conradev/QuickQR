@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+#include <sstream>
+
 #include "CGImageLuminanceSource.h"
 #include <zxing/common/IllegalArgumentException.h>
 
@@ -147,7 +149,10 @@ CGImageLuminanceSource::~CGImageLuminanceSource() {
 
 unsigned char * CGImageLuminanceSource::getRow(int y, unsigned char* row) {
     if (y < 0 || y >= this->getHeight()) {
-        throw IllegalArgumentException("Requested row is outside the image: " + y);
+        std::ostringstream ss;
+        const char *message = "Requested row is outside the image: ";
+        ss << message << y;
+        throw IllegalArgumentException(ss.str().c_str());
     }
     
     int width = getWidth();
